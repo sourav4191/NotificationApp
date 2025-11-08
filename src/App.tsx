@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import codePush from 'react-native-code-push';
 import {NavigationContainer} from '@react-navigation/native';
 import {ThemeProvider} from './theme/ThemeContext';
 import AppNavigator from './navigation/AppNavigator';
@@ -40,5 +41,9 @@ const ThemedNavigation = () => {
     </NavigationContainer>
   );
 };
+// ----- CodePush Integration -----
+let codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_START,
+};
 
-export default App;
+export default codePush(codePushOptions)(App);
