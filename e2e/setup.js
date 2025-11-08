@@ -1,0 +1,3 @@
+beforeAll(() => {
+  global.isDetox = true;
+});

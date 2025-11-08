@@ -1,0 +1,131 @@
+00:26:10.292 detox[5375] [90mi[39m Detected a deprecated "runnerConfig" property (string).
+00:26:10.294 detox[5375] [90mi[39m Detected a deprecated "testRunner" property (string).
+00:26:10.294 detox[5375] [90mi[39m Detected a deprecated "specs" property.
+00:26:10.294 detox[5375] [90mi[39m Please migrate your Detox config according to the guide:
+https://wix.github.io/Detox/docs/guide/migration
+
+00:26:10.296 detox[5375] [90mB[39m ../../.npm/_npx/e1f8d26b7d2b9e10/node_modules/.bin/detox test --configuration android
+  data: {
+    "id": "f1db7a5c-f873-4af2-1e02-fd69ecd579ea",
+    "detoxConfig": {
+      "configurationName": "android",
+      "apps": {
+        "default": {
+          "type": "android.apk",
+          "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+          "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+          "reversePorts": [
+            8081
+          ]
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/android.2025-11-07 18-56-10Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": true
+          },
+          "video": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "configuration": "android",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd .."
+        }
+      ],
+      "device": {
+        "type": "android.emulator",
+        "device": {
+          "avdName": "Pixel_4_API_35"
+        }
+      },
+      "logger": {
+        "level": "info",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/Users/interakt_mobiledev/.npm/_npx/e1f8d26b7d2b9e10/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "noRetryArgs": [
+          "shard"
+        ],
+        "jest": {
+          "setupTimeout": 300000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [
+            "e2e"
+          ],
+          "config": "e2e/config.json",
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-5375",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+00:26:10.300 detox[5375] [90mi[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-5375
+00:26:10.301 detox[5375] [90mi[39m starting server on  /tmp/detox.primary-5375 
+00:26:10.301 detox[5375] [90mi[39m starting TLS server false
+00:26:10.301 detox[5375] [90mi[39m starting server as Unix || Windows Socket
+00:26:10.303 detox[5375] [90mi[39m Detox server listening on localhost:63194...
+00:26:10.304 detox[5375] [90mi[39m Serialized the session state at: /private/var/folders/r5/9lklrtpd6673l0vf2r5ls1kh0000gn/T/f1db7a5c-f873-4af2-1e02-fd69ecd579ea.detox.json
+00:26:10.305 detox[5375] [90mB[39m jest --config e2e/config.json e2e
+00:26:11.566 detox[5375] [90mE[39m Command failed with exit code = 1:
+jest --config e2e/config.json e2e
+00:26:11.567 detox[5375] [90mi[39m Detox server has been closed gracefully
+00:26:11.567 detox[5375] [90mE[39m ../../.npm/_npx/e1f8d26b7d2b9e10/node_modules/.bin/detox test --configuration android

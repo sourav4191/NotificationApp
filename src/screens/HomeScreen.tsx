@@ -90,12 +90,17 @@ const HomeScreen = () => {
 
       <View style={styles.buttonRow}>
         <Button
+          testID="triggerNotificationBtn"
           title="Go to Notification Screen"
-          onPress={() =>
-            navigation.navigate('Notification', {
-              payload: {title: 'Manual Deep Link', id: '123'},
-            })
-          }
+          onPress={() => {
+            if (global.isDetox) {
+              navigation.navigate('Notification', {
+                payload: {title: 'Test Push', id: '999'},
+              });
+            } else {
+              PushNotificationService.triggerTestNotification();
+            }
+          }}
         />
       </View>
 

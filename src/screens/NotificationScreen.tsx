@@ -12,6 +12,7 @@ const NotificationScreen = ({route}: Props) => {
 
   return (
     <View style={styles.container}>
+      <Text testID="notificationOpenedText">Notification Opened!</Text>
       <Text style={styles.title}>Notification Payload</Text>
       <Text style={styles.json}>{JSON.stringify(payload, null, 2)}</Text>
     </View>
